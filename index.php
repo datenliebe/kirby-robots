@@ -11,7 +11,6 @@ Kirby::plugin('datenliebe/robots', [
                 $defaultDisallowPaths = [
                     '/kirby',
                     '/site',
-                    '/' . option('panel.slug', 'panel'), // Dynamic panel path
                 ];
 
                 $defaultRules = "User-agent: *\n";

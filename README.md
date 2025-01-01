@@ -9,7 +9,6 @@ The **datenliebe/kirby-robots** plugin for Kirby CMS makes it easy to manage you
 - **Default Disallow Rules**: Automatically disallows:
   - `/kirby`
   - `/site`
-  - `/panel` (dynamic, based on `panel.slug` in `config.php`).
 - **Custom Rules via Config**: Add additional `Disallow`, `Allow`, and `Sitemap` rules in `config.php`.
 - **Custom Rules via Panel**: Manage additional rules through a `robotsRules` field in the Kirby Panel.
 - **Dynamic robots.txt**: Serves the combined rules dynamically at `/robots.txt`.
@@ -38,13 +37,6 @@ The plugin automatically adds the following default rules:
 User-agent: *
 Disallow: /kirby
 Disallow: /site
-Disallow: /panel
-```
-
-If the `panel` path is customized in `config.php` (e.g., `'panel.slug' => 'dashboard'`), the `Disallow: /panel` rule will dynamically adjust to:
-
-```text
-Disallow: /dashboard
 ```
 
 ---
@@ -57,7 +49,6 @@ To extend the default rules, you can define additional rules in your `config.php
 
 ```php
 return [
-    'panel.slug' => 'custom-panel-path', // Example custom panel path
     'datenliebe.robots.rules' => [
         '*' => [ // Rules for all user agents
             'Disallow' => ['/hidden'], // Block specific directories
@@ -79,7 +70,6 @@ When you combine default and custom rules, your `robots.txt` might look like thi
 User-agent: *
 Disallow: /kirby
 Disallow: /site
-Disallow: /custom-panel-path
 Disallow: /hidden
 Allow: /public
 Sitemap: https://example.com/sitemap.xml
@@ -136,7 +126,7 @@ tabs:
 ### robots.txt Output Priority
 
 The `robots.txt` rules are combined in this order:
-1. **Default rules** (`/kirby`, `/site`, `/panel`).
+1. **Default rules** (`/kirby`, `/site`).
 2. **Custom rules** from `config.php`.
 3. **Custom rules** from the Panel field.
 
@@ -152,7 +142,6 @@ With both custom config and Panel rules, the output might look like this:
 User-agent: *
 Disallow: /kirby
 Disallow: /site
-Disallow: /custom-panel
 Disallow: /hidden
 Allow: /public
 Sitemap: https://example.com/sitemap.xml
