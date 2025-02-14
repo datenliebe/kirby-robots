@@ -53,15 +53,15 @@ Kirby::plugin('datenliebe/robots', [
     // Blueprint for the robots.txt field and tab
     'blueprints' => [
         'tabs/robots' => [
-            'label' => 'datenliebe.robotsRules.tab.label',
+            'label' => 'datenliebe.robots.tab.robotsRules.label',
             'icon' => 'bug',
             'fields' => [
                 'robotsRules' => [
-                    'label' => 'datenliebe.robotsRules.field.label',
+                    'label' => 'datenliebe.robots.field.robotsRules.label',
                     'type' => 'textarea',
                     'buttons' => false,
                     'font' => 'monospace',
-                    'help' => 'datenliebe.robotsRules.field.help',
+                    'help' => 'datenliebe.robots.field.robotsRules.help',
                 ],
             ],
         ],
