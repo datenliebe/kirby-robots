@@ -52,7 +52,7 @@ Kirby::plugin('datenliebe/robots', [
 
     // Blueprint for the robots.txt field and tab
     'blueprints' => [
-        'tabs/robots' => [
+        'tabs/datenliebe-robots-robots' => [
             'label' => 'datenliebe.robots.tab.robotsRules.label',
             'icon' => 'bug',
             'fields' => [
