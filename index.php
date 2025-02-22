@@ -44,27 +44,17 @@ Kirby::plugin('datenliebe/robots', [
         ]
     ],
 
-    // Plugin translations
-    'translations' => [
-        'en' => require __DIR__ . '/translations/en.php',
-        'de' => require __DIR__ . '/translations/de.php'
+    // Blueprints
+    'blueprints' => [
+        // Tabs
+        'tabs/robots' => __DIR__ . '/blueprints/tabs/robots.yml',
+        // Fields
+        'fields/robots-rules' => __DIR__ . '/blueprints/fields/rules.yml',
     ],
 
-    // Blueprint for the robots.txt field and tab
-    'blueprints' => [
-        'tabs/datenliebe-robots-robots' => [
-            'label' => 'datenliebe.robots.tab.robotsRules.label',
-            'icon' => 'bug',
-            'fields' => [
-                'robotsRules' => [
-                    'label' => 'datenliebe.robots.field.robotsRules.label',
-                    'type' => 'textarea',
-                    'buttons' => false,
-                    'font' => 'monospace',
-                    'help' => 'datenliebe.robots.field.robotsRules.help',
-                ],
-            ],
-        ],
+    // Plugin translations
+    'translations' => [
+        'de' => require __DIR__ . '/translations/de.php'
     ],
 
     // Default plugin options

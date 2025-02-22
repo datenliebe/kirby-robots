@@ -1,0 +1,4 @@
+label: robots.txt
+icon: bug
+fields:
+  robotsRules: fields/robots-rules

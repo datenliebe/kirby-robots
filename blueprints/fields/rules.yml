@@ -1,0 +1,5 @@
+label: robots.fields.rules.field.robotsRules.label
+type: textarea
+buttons: false
+font: monospace
+help: robots.fields.rules.field.robotsRules.help
