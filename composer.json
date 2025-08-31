@@ -1,0 +1,16 @@
+{
+	"name": "datenliebe/robots",
+	"description": "A robots.txt generator for Kirby CMS.",
+	"license": "MIT",
+	"type": "kirby-plugin",
+	"version": "1.0.0",
+	"authors": [
+		{
+			"name": "Oliver Zehn",
+			"email": "oliver@datenliebe.com"
+		}
+	],
+	"require": {
+		"getkirby/composer-installer": "^1.1"
+	}
+}
