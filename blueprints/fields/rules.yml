@@ -1,0 +1,5 @@
+label: datenliebe.robots.rules.robotsRules.label
+type: textarea
+buttons: false
+font: monospace
+help: datenliebe.robots.rules.robotsRules.help

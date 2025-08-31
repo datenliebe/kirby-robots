@@ -1,0 +1,4 @@
+label: datenliebe.robots.robots.tab.label
+icon: bug
+fields:
+  robotsRules: fields/robots-rules
